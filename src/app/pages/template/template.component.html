@@ -1,0 +1,41 @@
+<h4>Formulario SMS</h4>
+<hr>
+<form autocomplete="off">
+
+  <div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Telefono</label>
+      <div class="col-8">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Telefono"
+               #telefono>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Mensaje</label>
+      <div class="col-8">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Mensaje"
+               #mensaje>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary btn-block" (click)="enviarSMS(telefono.value,mensaje.value)">
+        Enviar
+      </button>
+    </div>
+  </div>
+
+</form>
+
