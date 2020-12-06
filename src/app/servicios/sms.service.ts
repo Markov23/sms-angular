@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class SmsService {
 
-url = 'http://localhost:3050/';
+url = 'http://localhost/';
 
 constructor(
     private http: HttpClient
@@ -19,7 +19,7 @@ enviarSMS(phone: string, message: string): Observable<any>{
     mensaje: message
   };
 
-  return this.http.post(this.url + 'sms', body);
+  return this.http.post(this.url + 'clinica-dental-sms-api/public/send-sms', body);
 }
 
 }
